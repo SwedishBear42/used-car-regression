@@ -1,0 +1,53 @@
+{
+  "seed": 42,
+  "n_train": 168,
+  "n_test": 72,
+  "n_auction_lots": 40,
+  "prep_cost": 1500,
+  "v1_formula": "Sale_Price ~ Mileage_K + Age_Years + Horsepower + Accident",
+  "v1_coefficients": {
+    "Intercept": 21762.4,
+    "Accident[T.yes]": -2176.64,
+    "Mileage_K": -78.15,
+    "Age_Years": -1291.63,
+    "Horsepower": 75.02
+  },
+  "v1_p_values": {
+    "Intercept": 0.0,
+    "Accident[T.yes]": 0.0,
+    "Mileage_K": 0.0,
+    "Age_Years": 0.0,
+    "Horsepower": 0.0
+  },
+  "v1_adj_r2_train": 0.8698,
+  "full_model_adj_r2_train": 0.8691,
+  "num_owners_p_value_in_full_model": 0.8653,
+  "baseline_price": 25851.19,
+  "test_fit": {
+    "baseline (training average)": {
+      "r2": -0.0137,
+      "rmse": 6494.0
+    },
+    "v1 (no Num_Owners)": {
+      "r2": 0.8227,
+      "rmse": 2716.0
+    }
+  },
+  "auction": {
+    "baseline": {
+      "cars_bought": 14,
+      "money_losing_cars": 10,
+      "total_profit": -6000.0
+    },
+    "v1": {
+      "cars_bought": 17,
+      "money_losing_cars": 6,
+      "total_profit": 15800.0
+    }
+  },
+  "auction_buy_everything_reference": {
+    "cars_bought": 40,
+    "money_losing_cars": 27,
+    "total_profit": -35500.0
+  }
+}
