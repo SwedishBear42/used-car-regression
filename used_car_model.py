@@ -200,7 +200,7 @@ ax.set_xlim(lo, hi); ax.set_ylim(lo, hi)
 ax.set_xlabel("Actual sale price"); ax.set_ylabel("Predicted sale price")
 ax.xaxis.set_major_formatter(dollars_k); ax.yaxis.set_major_formatter(dollars_k)
 ax.grid(color=GRID, linewidth=1); ax.set_axisbelow(True)
-ax.set_title(f"Predicted vs actual sale price, {len(test)} test cars the model never saw", loc="left", fontsize=12.5, pad=12)
+ax.set_title("Predicted vs actual sale price (test set)", loc="left", fontsize=12.5, pad=12)
 ax.legend(loc="upper left", frameon=False, fontsize=10)
 fig.tight_layout(); fig.savefig(HERE / "charts" / "predicted_vs_actual_test.png", dpi=200); plt.close(fig)
 
@@ -224,7 +224,7 @@ for ax, (title, key, fmt) in zip(axes, panels):
     ax.set_title(title, loc="left", fontsize=11.5, pad=10)
     ax.set_yticks([]); ax.spines["left"].set_visible(False); ax.spines["bottom"].set_visible(False)
     ax.tick_params(axis="x", length=0, labelsize=10.5); ax.margins(x=0.35)
-fig.suptitle(f"One auction, {len(lots)} lots: the dealer's rule with and without the model", x=0.012, ha="left", fontsize=12.5)
+fig.suptitle("Auction lots: baseline vs model v1", x=0.012, ha="left", fontsize=12.5)
 fig.tight_layout(rect=(0, 0, 1, 0.93)); fig.savefig(HERE / "charts" / "auction_baseline_vs_v1.png", dpi=200); plt.close(fig)
 
 results = {
